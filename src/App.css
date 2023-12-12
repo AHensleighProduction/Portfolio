@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px 20px 30px;
+}
+header h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 70px;
+  color: rgb(7, 6, 5);
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav span{
+  font-size: 20px;
+  color: rgb(7, 6, 5);
+  text-decoration: none;
+  cursor: pointer;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav span:hover{
+  color: rgb(239, 246, 242);
+}
+.bio {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#Landing {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  min-width: 300px;
+  flex-direction: column;
+}
+
+#Landing > iframe {
+  width: 100%;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.introDetails {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.profilePic {
+  width: 45%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fa-brands {
+  font-size: 58px;
+  color: rgb(3, 2, 2);
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 150px;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+/* make project links in rank not file  */
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 300px);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.portfolioButton{
+  width: 30%;
+  background-color: rgb(1, 31, 11);
+  opacity: 0.5;
+  padding: 15px;
+  border-radius: 20px;
+  color: rgb(198, 216, 243);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.projectcard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: seashell;
+  margin: 15px;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.projectcard  img{
+  width: 100%;
+}
+
+.projectcard h4{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.projectcontainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+}
+
+.pagetitle{
+  font-size: 90px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 1190px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .introDetails {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .profilePic {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #Landing {
+    width: 95%;
+    
+  }
+  .projectcontainer{
+    flex-direction: column;
+    align-items: center;
   }
 }
